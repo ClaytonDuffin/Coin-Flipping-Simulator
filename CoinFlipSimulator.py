@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt; plt.rcdefaults()
 import tqdm as tqdm
 import sys as sys
 
-'''what was suggested to me, was that this demonstrates
+'''What was suggested to me, was that this demonstrates
  the flaws in assuming something is truly "random." Someone 
  else that I had asked about the behavior of this voiced
  that the flip sequences should be asymptotic in nature, 
@@ -14,10 +14,10 @@ import sys as sys
  in reality.'''
 
 
-'''plots the sequence of flips.'''
+'''Plots the sequence of flips.'''
 
 def coinPlot(data):
-    data['mean'] = data.mean(axis=1)
+    #data['mean'] = data.mean(axis=1)
     ax1 = data.plot(figsize=[14.275,9.525],linewidth = 1)
     ax1.minorticks_on()
     ax1.title.set_text('Probability of Flipping Heads')
@@ -30,7 +30,7 @@ def coinPlot(data):
     plt.pause(.01)
     
 
-'''virtually flips the coin. Also stores data.'''
+'''Virtually flips the coin. Also stores data.'''
 
 flips = pd.DataFrame()
 
@@ -63,11 +63,12 @@ for j in tqdm.tqdm(range(10)): #desired amount of flipping sequences
 coinPlot(flips)
 
 
-'''used to observe behavior of flips after n(params) flips
+'''Used to observe behavior of flips after n(params) flips
    have taken place. Have not included the csv file for the 
    flip sequences up to n = 1,000,000, as it was about 50MB, 
    but generate one of your own if curious. I've attached a
    chart showing the results from the code below in the repository'''
+
 try:
     flips = pd.read_csv('flips.csv')
 except FileNotFoundError:
@@ -99,6 +100,3 @@ for i in params:
     plt.title('Flips 500,000 through 1,000,000 for 2 Sequences')
     plt.tick_params(labelsize=16, labelright=True)
     plt.grid(which='both', linestyle='-', linewidth='1', color='dimgrey')
-    plt.grid(which='minor', linestyle=':', linewidth='1', color='grey')
-
-
