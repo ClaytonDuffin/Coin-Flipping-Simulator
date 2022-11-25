@@ -16,7 +16,7 @@ import sys as sys
 
 '''Plots the sequence of flips.'''
 
-def coinPlot(data):
+def coinPlot(data: pd.DataFrame) -> None:
     #data['mean'] = data.mean(axis=1)
     ax1 = data.plot(figsize=[14.275,9.525],linewidth = 1)
     ax1.minorticks_on()
