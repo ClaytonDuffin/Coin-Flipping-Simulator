@@ -1,5 +1,5 @@
 # Coin-Flipping-Simulator
-Simple program used to observe the behavior of simulated coin flips.
+Simple script used to observe the behavior of simulated coin flips.
 
 
 For larger simulations, it takes a while to run the way I have it structured, so it could be worth your time to enhance runtime if you want to do something more intensive with this project.
