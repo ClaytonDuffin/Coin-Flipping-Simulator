@@ -13,8 +13,6 @@ import sys as sys
  though as can be observed here, this is often not the case
  in reality.'''
 
-
-
 def coinPlot(data: pd.DataFrame) -> None:
  
    '''
