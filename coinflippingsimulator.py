@@ -14,20 +14,28 @@ import sys as sys
  in reality.'''
 
 
-'''Plots the sequence of flips.'''
 
 def coinPlot(data: pd.DataFrame) -> None:
-    #data['mean'] = data.mean(axis=1)
-    ax1 = data.plot(figsize=[14.275,9.525],linewidth = 1)
-    ax1.minorticks_on()
-    ax1.title.set_text('Probability of Flipping Heads')
-    ax1.tick_params(labelsize=16, labelright=True)
-    ax1.axhline(0.5, linewidth = 1.5, color='firebrick', zorder = 1)
-    ax1.set_ylim(.4, .6)
-    ax1.get_legend().remove()
-    ax1.grid(which='both', linestyle='-', linewidth='1', color='dimgrey')
-    ax1.grid(which='minor', linestyle=':', linewidth='1', color='grey')
-    plt.pause(.01)
+ 
+   '''
+   Plots the sequence of flips.
+   
+   Parameters
+   ----------
+   data : pd.DataFrame
+       data to be plotted.
+   '''
+
+   ax1 = data.plot(figsize=[14.275,9.525],linewidth = 1)
+   ax1.minorticks_on()
+   ax1.title.set_text('Probability of Flipping Heads')
+   ax1.tick_params(labelsize=16, labelright=True)
+   ax1.axhline(0.5, linewidth = 1.5, color='firebrick', zorder = 1)
+   ax1.set_ylim(.4, .6)
+   ax1.get_legend().remove()
+   ax1.grid(which='both', linestyle='-', linewidth='1', color='dimgrey')
+   ax1.grid(which='minor', linestyle=':', linewidth='1', color='grey')
+   plt.pause(.01)
     
 
 '''Virtually flips the coin. Also stores data.'''
